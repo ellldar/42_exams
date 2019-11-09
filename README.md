@@ -25,8 +25,8 @@ If there's no solution for a particular question, at least, you would know at wh
 * **last_word**
 * **ft_strdup**
 * **union**
-* **snake_to_camel
-* **camel_to_snake
+* **snake_to_camel**
+* **camel_to_snake**
 * **inter**
 
 ### Level 3
