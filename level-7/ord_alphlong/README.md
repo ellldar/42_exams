@@ -1,0 +1,164 @@
+# ORD_ALPHLONG (GOT THIS ONE WRONG! CHECK TRACEROUTE)
+
+### Assignment
+
+```
+Assignment name  : ord_alphlong
+Expected files   : *.c, *.h
+Allowed functions: write, malloc, free
+--------------------------------------------------------------------------------
+
+Write a program that takes a string as a parameter and prints its words sorted
+in order of their length first and then in alphabetical order on each line:
+when we say alphabetical order we ignore the case of letters.
+
+For example aA and Aa are the same but the  original order must remain
+(lower and upper case are the same in alphabetical order). If there are
+duplicates, they must remain.
+
+If number of parameters is different from 1, the program prints 
+\n.
+
+There will be only spaces, tabs and alphanumeric caracters in strings.
+
+You'll print only one space between each word. Nothing before the first and 
+after the last word of each line.
+```
+
+### Examples
+
+```
+$>./ord_alphlong
+$
+$>./ord_alphlong "After all this time Always said Snape" | cat -e
+all$
+said this time$
+After Snape$
+Always$
+$>./ord_alphlong "A a b B cc ca cd" | cat -e
+A a b B$
+ca cc cd$
+$>./ord_alphlong "Never take a gamble you are not prepared to lose" | cat -e
+a$
+to$
+are not you$
+lose take$
+Never$
+gamble$
+prepared$
+$>./ord_alphlong "De son baton il frappa la pierre et l eau jaillit" | cat -e
+l$
+De et il la$
+eau son$
+baton$
+frappa pierre$
+jaillit$
+$>./ord_alphlong "A a b B cc ca cd" | cat -e
+A a b B$
+ca cc cd$
+$>./ord_alphlong "Pour l Imperium de l humanite" | cat -e
+l l$
+de$
+Pour$
+humanite Imperium$
+$>
+```
+
+### Traceroute
+
+```
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z2r5p45.42.us.org
+Darwin 17.4.0 x86_64
+$> date
+Fri Apr 19 17:47:02 PDT 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/piscine-c-exam-final/exam_20190419/esupatae
+
+= Git history ==================================================================
+$> git -C /var/folders/rc/x4l0knds3zzcxxvcy49kbs5h0000gp/T/tmpkn_yW0/user log --pretty='%H - %an, %ad : %s'
+110495752c7ddf3a82dd8ffdf3932904607ae985 - Exam 42, Fri Apr 19 17:46:19 2019 -0700 : Not working: Just want to have my files
+2a3cc29fd0d940b13901c80041df2456b359ecc9 - Exam 42, Fri Apr 19 15:31:45 2019 -0700 : Level 6: count_alpha
+5d92a55724d13291c5632d9c29cf4bc842e7c7c8 - Exam 42, Fri Apr 19 14:27:26 2019 -0700 : Level 5: Brainfuck
+6bdd35accb38850a6435a59c75e111857f5e71ed - Exam 42, Fri Apr 19 12:12:52 2019 -0700 : Level 4: fprime
+56945ce668bfafce1949afa066c73adf581a01ed - Exam 42, Fri Apr 19 11:26:34 2019 -0700 : Level 3: hidenp - account for repeat letters in string 1
+6d17a2c2eb989d84e097c600790a452e15297194 - Exam 42, Fri Apr 19 11:21:00 2019 -0700 : Level 3: hidenp
+87d2ef347bc84e8278b4b7f99948902b69eae17a - Exam 42, Fri Apr 19 10:56:12 2019 -0700 : Level 2: union
+e7e05f3e9a40d6c31cd74871657ffd1eb66b0648 - Exam 42, Fri Apr 19 10:27:35 2019 -0700 : Level 1: first_word
+47197b9f062adf2a67d7c32d6610f51546c23dc7 - Exam 42, Fri Apr 19 10:09:07 2019 -0700 : Level 0: only_a
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/rc/x4l0knds3zzcxxvcy49kbs5h0000gp/T/tmpkn_yW0/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  2504 Apr 19 17:47 __GIT_HISTORY
+drwxr-xr-x  5 deepthought  deepthought   170 Apr 19 17:47 brainfuck
+drwxr-xr-x  3 deepthought  deepthought   102 Apr 19 17:47 count_alpha
+drwxr-xr-x  3 deepthought  deepthought   102 Apr 19 17:47 first_word
+drwxr-xr-x  3 deepthought  deepthought   102 Apr 19 17:47 fprime
+drwxr-xr-x  3 deepthought  deepthought   102 Apr 19 17:47 hidenp
+drwxr-xr-x  3 deepthought  deepthought   102 Apr 19 17:47 only_a
+drwxr-xr-x  4 deepthought  deepthought   136 Apr 19 17:47 ord_alphlong
+drwxr-xr-x  3 deepthought  deepthought   102 Apr 19 17:47 union
+
+/var/folders/rc/x4l0knds3zzcxxvcy49kbs5h0000gp/T/tmpkn_yW0/user/brainfuck:
+total 24
+-rw-r--r--  1 deepthought  deepthought  2023 Apr 19 17:47 brainfuck.c
+-rw-r--r--  1 deepthought  deepthought  1286 Apr 19 17:47 brainfuck.h
+-rw-r--r--  1 deepthought  deepthought  1347 Apr 19 17:47 helper_functions.c
+
+/var/folders/rc/x4l0knds3zzcxxvcy49kbs5h0000gp/T/tmpkn_yW0/user/count_alpha:
+total 8
+-rw-r--r--  1 deepthought  deepthought  2067 Apr 19 17:47 count_alpha.c
+
+/var/folders/rc/x4l0knds3zzcxxvcy49kbs5h0000gp/T/tmpkn_yW0/user/first_word:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1243 Apr 19 17:47 first_word.c
+
+/var/folders/rc/x4l0knds3zzcxxvcy49kbs5h0000gp/T/tmpkn_yW0/user/fprime:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1443 Apr 19 17:47 fprime.c
+
+/var/folders/rc/x4l0knds3zzcxxvcy49kbs5h0000gp/T/tmpkn_yW0/user/hidenp:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1442 Apr 19 17:47 hidenp.c
+
+/var/folders/rc/x4l0knds3zzcxxvcy49kbs5h0000gp/T/tmpkn_yW0/user/only_a:
+total 8
+-rw-r--r--  1 deepthought  deepthought  965 Apr 19 17:47 only_a.c
+
+/var/folders/rc/x4l0knds3zzcxxvcy49kbs5h0000gp/T/tmpkn_yW0/user/ord_alphlong:
+total 16
+-rw-r--r--  1 deepthought  deepthought  1931 Apr 19 17:47 main.c
+-rw-r--r--  1 deepthought  deepthought  1091 Apr 19 17:47 main.h
+
+/var/folders/rc/x4l0knds3zzcxxvcy49kbs5h0000gp/T/tmpkn_yW0/user/union:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1451 Apr 19 17:47 union.c
+ 
+= ord_alphlong =================================================================
+$> gcc -Wextra -Wall -Werror main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./bipjwmnu5uj5ewyfwuzyx1wf "lorem ipsum dolor sit amet consectetur adipiscing elit curabitur sollicitudin pretium nibh"
+$> diff -U 3 user_output_test1 test1.output | cat -e
+Binary files user_output_test1 and test1.output differ$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================
+```

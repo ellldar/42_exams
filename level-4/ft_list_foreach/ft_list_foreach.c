@@ -1,16 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_bits.c                                        :+:      :+:    :+:   */
+/*   ft_list_foreach.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esupatae <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/12 21:55:25 by esupatae          #+#    #+#             */
-/*   Updated: 2019/11/12 21:55:27 by esupatae         ###   ########.fr       */
+/*   Created: 2019/04/12 20:50:07 by exam              #+#    #+#             */
+/*   Updated: 2019/04/12 21:15:11 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned char	swap_bits(unsigned char octet)
+#include "ft_list.h"
+
+void	ft_list_foreach(t_list *begin_list, void (*f)(void *))
 {
-	return(octet >> 4 | octet << 4);
+	while (begin_list)
+	{
+		f(begin_list->data);
+		begin_list = begin_list->next;
+	}
 }
+

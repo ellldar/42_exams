@@ -1,17 +1,11 @@
-# Swap Bits
-
-### Assignment
-
-```
 Assignment name  : swap_bits
 Expected files   : swap_bits.c
 Allowed functions:
 --------------------------------------------------------------------------------
 
-Write a function that takes a byte, swaps its halves (like the example) and
-returns the result.
+Scrieti o functie care primeste un byte, inverseaza jumatatile (ca si in exemplu) si returneaza rezultatul.
 
-Your function must be declared as follows:
+Functia trebuie declarata ca si mai jos:
 
 unsigned char	swap_bits(unsigned char octet);
 
@@ -23,4 +17,3 @@ _____________
      \ /
      / \
  0001 | 0100
-```

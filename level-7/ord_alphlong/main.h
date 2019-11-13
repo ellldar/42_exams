@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_bits.c                                        :+:      :+:    :+:   */
+/*   main.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esupatae <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/12 21:55:25 by esupatae          #+#    #+#             */
-/*   Updated: 2019/11/12 21:55:27 by esupatae         ###   ########.fr       */
+/*   Created: 2019/04/19 15:44:26 by exam              #+#    #+#             */
+/*   Updated: 2019/04/19 17:43:27 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned char	swap_bits(unsigned char octet)
+#ifndef MAIN_H
+# define MAIN_H
+
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdio.h>
+
+typedef struct	s_list	t_list;
+typedef	struct	s_list
 {
-	return(octet >> 4 | octet << 4);
-}
+	t_list	*next;
+	char	letter;
+}				t_list;
+
+#endif

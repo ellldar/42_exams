@@ -1,16 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_bits.c                                        :+:      :+:    :+:   */
+/*   list.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esupatae <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: zaz <zaz@staff.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/12 21:55:25 by esupatae          #+#    #+#             */
-/*   Updated: 2019/11/12 21:55:27 by esupatae         ###   ########.fr       */
+/*   Created: 2014/02/27 13:14:10 by zaz               #+#    #+#             */
+/*   Updated: 2014/02/27 13:15:29 by zaz              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned char	swap_bits(unsigned char octet)
+typedef struct s_list t_list;
+
+struct s_list
 {
-	return(octet >> 4 | octet << 4);
-}
+	int     data;
+	t_list  *next;
+};

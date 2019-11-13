@@ -1,21 +1,15 @@
-# Swap Bits
-
-### Assignment
-
-```
 Assignment name  : swap_bits
 Expected files   : swap_bits.c
 Allowed functions:
 --------------------------------------------------------------------------------
 
-Write a function that takes a byte, swaps its halves (like the example) and
-returns the result.
+Écrire une fonction qui prend un octet, inverse ses moitiés (comme dans l'exemple), puis retourne le résultat.
 
-Your function must be declared as follows:
+Votre fonction doit être déclarée comme suit:
 
 unsigned char	swap_bits(unsigned char octet);
 
-Example:
+Exemple:
 
   1 byte
 _____________
@@ -23,4 +17,3 @@ _____________
      \ /
      / \
  0001 | 0100
-```

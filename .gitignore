@@ -54,3 +54,6 @@ dkms.conf
 # JetBrains Application Settings
 .idea
 
+# Other Junk
+.DS*
+._.DS*
