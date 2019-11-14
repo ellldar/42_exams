@@ -58,6 +58,7 @@ If there's no solution for a particular question, at least, you would know at wh
 * **brainfuck**
 * **print_memory**
 * **check_mate**
+* **ft_atoi_base**
 * **ft_itoa_base**
 * **brackets**
 * **rpn_calc**
